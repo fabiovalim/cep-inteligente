@@ -1,0 +1,128 @@
+@use 'variables' as var;
+@use 'bootstrap/scss/bootstrap';
+
+html {
+  scroll-behavior: smooth;
+}
+
+#inicio {
+  // Cor de fundo sólida como fallback (segurança)
+  background-color: var.$primary-bg; 
+
+  // O gradiente radial que cria o efeito
+  background-image: radial-gradient(circle at center, #212529, var.$primary-bg);
+
+  // Garante que o fundo cubra a tela inteira e não se repita
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #494949;
+  }
+}
+
+.feature-card {
+  border: 1px solid #b6b6b6;
+  border-radius: 2rem; // Bordas mais arredondadas
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 400px;
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    p {
+      flex-grow: 1;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .card-text {
+    align-items: center;
+  }
+
+  .feature-icon {
+    color: var.$accent-color; // Usa nossa cor de destaque
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+// Efeito do menu ao rolar
+.navbar-scrolled {
+  background-color: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.4s ease-in-out;
+}
+
+// Estilo do botão de destaque
+.btn-custom {
+  background-color: var.$accent-color;
+  border-color: var.$accent-color;
+  color: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken(var.$accent-color, 10%);
+    border-color: darken(var.$accent-color, 10%);
+    transform: translateY(-3px);
+  }
+}
+
+.btn-outline-light {
+  border-color: var.$accent-color;
+  color: var.$accent-color;
+  &:hover {
+    background-color: darken(var.$accent-color, 10%);
+    border-color: darken(var.$accent-color, 10%);
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-7px);
+  }
+}
+
+#sobre-api {
+  background-image: linear-gradient(45deg, #0d6dfd10 5%, #ffffff 50%, #0d6dfd10 95%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.icon-footer {
+  &:hover {
+    color: #898989;
+    transition: all 0.3s ease;
+  }
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500&display=swap');
+
+$font-family-headings: 'Poppins', sans-serif;
+$font-family-base: 'Inter', sans-serif;
+
+$primary-bg: #121212;
+$text-color: #EAEAEA;
+$text-muted: #adb5bd;
+$accent-color: #0d6efd;
+
+// Sobrescevendo variaveis do bootstrap
+$body-bg: $primary-bg;
+$body-color: $text-color;
+$headings-font-family: $font-family-headings;
