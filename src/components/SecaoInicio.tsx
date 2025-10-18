@@ -19,7 +19,7 @@ export const SecaoInicio = () => { //========= SEÇÃO 1 - Início =========
         />
         <p className="lead mb-5">Ferramenta rápida para consulta e validação de CEPs no Brasil</p>
         <div className="d-grid gap-3 d-sm-flex justify-content-sm-center">
-          <Link to="/#" className="btn btn-primary btn-lg btn-custom">Consulta Individual</Link>
+          <Link to="/buscar-cep" className="btn btn-primary btn-lg btn-custom">Consulta Individual</Link>
           <Link to="/#" className="btn btn-primary btn-lg btn-custom">Buscar por Endereço</Link>
           <Link to="/#" className="btn btn-primary btn-lg btn-custom">Validação em Lote</Link>
         </div>
