@@ -2,7 +2,7 @@ import { Api } from "./api/ApiConfig";
 import { ApiException } from "./api/ApiException";
 import { Endereco } from "../types/Endereco";
 
-const getByCep = async (cep: number): Promise<Endereco | ApiException> => {
+const getByCep = async (cep: string): Promise<Endereco | ApiException> => {
   try {
     const { data } = await Api().get(`/${cep}/json`);
     return data;
@@ -18,4 +18,9 @@ const getByEndereco = async (uf: string, cidade: string, logr: string): Promise<
   } catch (error: any) {
     return new ApiException(error.message || "Erro ao buscar endereço...")
   }
+};
+
+export const EnderecoService = {
+  getByCep,
+  getByEndereco
 };
