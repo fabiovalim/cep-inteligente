@@ -1,5 +1,7 @@
 @use 'variables' as var;
+@use 'navbarPage';
 @use 'bootstrap/scss/bootstrap';
+@use '../pages/consultaIndividual/consultaIndividual';
 
 html {
   scroll-behavior: smooth;
