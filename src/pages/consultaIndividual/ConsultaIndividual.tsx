@@ -3,8 +3,8 @@ import { Search } from "react-bootstrap-icons";
 import { Endereco  } from "../../types/Endereco"; // Renomeando para evitar conflito de nomes
 import { EnderecoService } from "../../services/EnderecoService"; // Supondo que seus serviços estão aqui
 import { ApiException } from "../../services/api/ApiException";
-import { HeaderPage } from "../../components/layout/HeaderPage";
-import { Footer } from "../../components/layout/Footer";
+import { HeaderPage } from "../../components/HeaderPage";
+import { Footer } from "../../components/Footer";
 
 export const BuscaCepPage = () => {
   const [cepInput, setCepInput] = useState("");
