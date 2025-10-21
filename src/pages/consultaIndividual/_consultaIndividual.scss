@@ -1,5 +1,30 @@
 @use '../../styles/variables' as var;
 
-.pageConsulta {
-    background-color: var.$primary-bg;
+#consulta-individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // Cor de fundo sólida como fallback (segurança)
+  background-color: var.$primary-bg; 
+
+  // O gradiente radial que cria o efeito
+  background-image: radial-gradient(circle at center, #212529, var.$primary-bg);
+
+  // Garante que o fundo cubra a tela inteira e não se repita
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #494949;
+  }
+}
+
+.my-consulta {
+  min-width: 800px;
 }

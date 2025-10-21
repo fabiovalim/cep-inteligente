@@ -2,7 +2,7 @@ import { Linkedin, Github, Instagram } from 'react-bootstrap-icons';
 
 export const Footer = () => {
   return (
-    <footer className="py-4" style={{ backgroundColor: '#0c0c0c' }}>
+    <footer className="py-4 my-footer" style={{ backgroundColor: '#0c0c0c' }}>
       <div className="container text-center">
         <p className="text-muted mb-2">&copy; 2025 Fábio Damas Valim. Todos os direitos reservados.</p>
         <div>
