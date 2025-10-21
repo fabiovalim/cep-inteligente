@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Search } from "react-bootstrap-icons";
-import { Endereco  } from "../../types/Endereco"; // Renomeando para evitar conflito de nomes
-import { EnderecoService } from "../../services/EnderecoService"; // Supondo que seus serviços estão aqui
+import { Endereco  } from "../../types/Endereco";
+import { EnderecoService } from "../../services/EnderecoService";
 import { ApiException } from "../../services/api/ApiException";
 import { HeaderPage } from "../../components/HeaderPage";
-import { Footer } from "../../components/Footer";
 
 export const BuscaCepPage = () => {
   const [cepInput, setCepInput] = useState("");
@@ -38,7 +37,6 @@ export const BuscaCepPage = () => {
     }
   };
 
-  // --- Função para limpar apenas os números do CEP ---
   const handleCepChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const cep = e.target.value.replace(/\D/g, ''); // Remove tudo que não for dígito
     setCepInput(cep);
@@ -137,7 +135,6 @@ export const BuscaCepPage = () => {
                   </div>
                 )}
               </div>
-
             </div>
           </div>
         </div>
