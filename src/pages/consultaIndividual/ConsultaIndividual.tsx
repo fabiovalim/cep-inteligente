@@ -41,6 +41,11 @@ export const BuscaCepPage = () => {
     const cep = e.target.value.replace(/\D/g, ''); // Remove tudo que não for dígito
     setCepInput(cep);
   };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // MUITO IMPORTANTE: Previne o recarregamento da página
+    handleSearch();       // Chama a sua função de busca que já existe
+  };
   
   return (
     <>
@@ -50,34 +55,27 @@ export const BuscaCepPage = () => {
           <div className="my-consulta row justify-content-center">
             <div className="col-lg-8">
 
-              {/* 
-              <div className="text-center mb-5">
-                <h2 className="display-5 fw-bold">Consulta de CEP Individual</h2>
-                <p className="lead text-muted">Digite um CEP válido para ver os detalhes do endereço.</p>
-              </div>
-              */}
+              <form onSubmit={handleSubmit} className="input-group input-group-lg mb-4">
+                <div className="input-group input-group-lg mb-4">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Digite o CEP (apenas números)"
+                    value={cepInput}
+                    onChange={handleCepChange}
+                    maxLength={8}
+                    disabled={isLoading}
+                  />
+                  <button className="btn btn-primary px-4" onClick={handleSearch} disabled={isLoading}>
+                    {isLoading ? (
+                      <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    ) : (
+                      <Search />
+                    )}
+                  </button>
+                </div>
+              </form>
 
-              {/* --- Input e Botão de Busca --- */}
-              <div className="input-group input-group-lg mb-4">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Digite o CEP (apenas números)"
-                  value={cepInput}
-                  onChange={handleCepChange}
-                  maxLength={8}
-                  disabled={isLoading}
-                />
-                <button className="btn btn-primary px-4" onClick={handleSearch} disabled={isLoading}>
-                  {isLoading ? (
-                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                  ) : (
-                    <Search />
-                  )}
-                </button>
-              </div>
-
-              {/* --- Área de Resultados --- */}
               <div className="mt-5">
                 {isLoading && (
                   <div className="text-center">
@@ -128,6 +126,14 @@ export const BuscaCepPage = () => {
                           <tr>
                             <th scope="row">Código IBGE</th>
                             <td>{endereco.ibge}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Região</th>
+                            <td>{endereco.regiao}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Código SIAFI</th>
+                            <td>{endereco.siafi}</td>
                           </tr>
                         </tbody>
                       </table>
