@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Search } from "react-bootstrap-icons";
-import { Endereco  } from "../../types/Endereco";
+import { Endereco } from "../../types/Endereco";
 import { EnderecoService } from "../../services/EnderecoService";
 import { ApiException } from "../../services/api/ApiException";
 import { HeaderPage } from "../../components/HeaderPage";
@@ -21,7 +21,6 @@ export const BuscaCepPage = () => {
     setError(null);
     setEndereco(null);
 
-    // Supondo que seu serviço se chame EnderecoService
     const result = await EnderecoService.getByCep(cepInput);
 
     setIsLoading(false);
@@ -43,37 +42,34 @@ export const BuscaCepPage = () => {
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // MUITO IMPORTANTE: Previne o recarregamento da página
-    handleSearch();       // Chama a sua função de busca que já existe
+    event.preventDefault(); // Previne o recarregamento da página
+    handleSearch();         // Chama a função de busca que já existe
   };
-  
+
   return (
     <>
-      <section id="consulta-individual">
+      <div id="consulta-individual">
         <HeaderPage />
-        <div className="Container">
-          <div className="my-consulta row justify-content-center">
-            <div className="col-lg-8">
-
-              <form onSubmit={handleSubmit} className="input-group input-group-lg mb-4">
-                <div className="input-group input-group-lg mb-4">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Digite o CEP (apenas números)"
-                    value={cepInput}
-                    onChange={handleCepChange}
-                    maxLength={8}
-                    disabled={isLoading}
-                  />
-                  <button className="btn btn-primary px-4" onClick={handleSearch} disabled={isLoading}>
-                    {isLoading ? (
-                      <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    ) : (
-                      <Search />
-                    )}
-                  </button>
-                </div>
+        <div className="container mt-5">
+          <div className="row justify-content-center">
+            <div className="col-lg-6 col-md-8">
+              <form onSubmit={handleSubmit} className="input-group input-group-lg">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Digite o CEP (apenas números)"
+                  value={cepInput}
+                  onChange={handleCepChange}
+                  maxLength={8}
+                  disabled={isLoading}
+                />
+                <button className="btn btn-primary px-4" type="submit" disabled={isLoading}>
+                  {isLoading ? (
+                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  ) : (
+                    <Search />
+                  )}
+                </button>
               </form>
 
               <div className="mt-5">
@@ -144,7 +140,7 @@ export const BuscaCepPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

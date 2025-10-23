@@ -3,8 +3,6 @@
 #consulta-individual {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   // Cor de fundo sólida como fallback (segurança)
   background-color: var.$primary-bg; 
