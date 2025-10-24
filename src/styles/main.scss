@@ -2,6 +2,7 @@
 @use 'navbarPage';
 @use 'bootstrap/scss/bootstrap';
 @use '../pages/consultaIndividual/consultaIndividual';
+@use '../pages/consultaEndereco/consultaEndereco';
 
 html {
   scroll-behavior: smooth;
