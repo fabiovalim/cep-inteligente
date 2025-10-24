@@ -50,28 +50,33 @@ export const BuscaCepPage = () => {
     <>
       <div id="consulta-individual">
         <HeaderPage />
-        <div className="container mt-5">
+        <div className="container mt-4">
           <div className="row justify-content-center">
-            <div className="col-lg-6 col-md-8">
-              <form onSubmit={handleSubmit} className="input-group input-group-lg">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Digite o CEP (apenas números)"
-                  value={cepInput}
-                  onChange={handleCepChange}
-                  maxLength={8}
-                  disabled={isLoading}
-                />
-                <button className="btn btn-primary px-4" type="submit" disabled={isLoading}>
+            <div className="col-lg-8 col-md-10">
+
+              {/* --- Formulário de Busca --- */}
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <label htmlFor="cep" className="form-label">DIGITE O CEP</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Ex: 30110945"
+                    value={cepInput}
+                    onChange={handleCepChange}
+                    maxLength={8}
+                    disabled={isLoading}
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary w-100 btn-lg mt-4" onClick={handleSearch} disabled={isLoading}>
                   {isLoading ? (
-                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                  ) : (
-                    <Search />
-                  )}
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Consultando...
+                    </>
+                  ) : (<Search />)}
                 </button>
               </form>
-
               <div className="mt-5">
                 {isLoading && (
                   <div className="text-center">
