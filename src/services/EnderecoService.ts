@@ -11,7 +11,7 @@ const getByCep = async (cep: string): Promise<Endereco | ApiException> => {
   }
 };
 
-const getByEndereco = async (uf: string, cidade: string, logr: string): Promise<Endereco | ApiException> => {
+const getByEndereco = async (uf: string, cidade: string, logr: string): Promise<Endereco[] | ApiException> => {
   try {
     const { data } = await Api().get(`/${uf}/${cidade}/${logr}/json`);
     return data;
