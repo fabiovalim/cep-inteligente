@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { HeaderPage } from "../../components/HeaderPage";
-import { EnderecoService } from "../../services/EnderecoService"; // Ajuste o caminho se necessário
-import { ApiException } from "../../services/api/ApiException";   // Ajuste o caminho se necessário
-import { Endereco } from '../../types/Endereco';                   // Ajuste o caminho se necessário
+import { EnderecoService } from "../../services/EnderecoService";
+import { ApiException } from "../../services/api/ApiException";
+import { Endereco } from '../../types/Endereco';                 
 
 export const ConsultaEndereco = () => {
   // --- Estados do Formulário ---
@@ -11,7 +11,7 @@ export const ConsultaEndereco = () => {
   const [logradouro, setLogradouro] = useState('');
 
   // --- Estados de Controle ---
-  const [resultados, setResultados] = useState<Endereco[] | null>(null); // Agora é um array de Enderecos
+  const [resultados, setResultados] = useState<Endereco[] | null>(null); // um array de Enderecos (Uma rua pode ter mais de um cep)
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isResultVisible, setIsResultVisible] = useState(false);
