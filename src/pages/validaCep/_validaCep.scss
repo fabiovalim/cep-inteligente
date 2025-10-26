@@ -33,4 +33,18 @@
     padding: 2rem 3rem;
     border-radius: 1rem;
   }
+
+  .table-responsive {
+    border-radius: .5rem;
+  }
+
+  .status-valido {
+    background-color: rgba(0, 255, 136, 0.5);
+    color: rgb(6 38 0 / 80%);
+  }
+
+  .status-invalido {
+    background-color: rgba(255, 0, 0, 0.5); // Exemplo para o inválido
+    color: rgb(155 56 56 / 80%);
+  }
 }
