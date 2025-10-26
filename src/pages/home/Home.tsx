@@ -24,7 +24,7 @@ export const Home = () => {
         <div className="d-grid gap-3 d-sm-flex justify-content-sm-center">
           <Link to="/buscar-cep" className="btn btn-primary btn-lg btn-custom">Consulta Individual</Link>
           <Link to="/consulta-endereco" className="btn btn-primary btn-lg btn-custom">Buscar por Endereço</Link>
-          <Link to="/#" className="btn btn-primary btn-lg btn-custom">Validação em Lote</Link>
+          <Link to="/valida-cep" className="btn btn-primary btn-lg btn-custom">Validação em Lote</Link>
         </div>
       </div>
     </section>

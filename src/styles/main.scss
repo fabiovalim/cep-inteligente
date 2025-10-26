@@ -1,8 +1,11 @@
 @use 'variables' as var;
 @use 'navbarPage';
 @use 'bootstrap/scss/bootstrap';
+
+// Páginas
 @use '../pages/consultaIndividual/consultaIndividual';
 @use '../pages/consultaEndereco/consultaEndereco';
+@use '../pages/validaCep/validaCep';
 
 html {
   scroll-behavior: smooth;
