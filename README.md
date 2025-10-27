@@ -1,5 +1,4 @@
 #  CEP Inteligente - Zetta Lab 2025
-Um front-end moderno e responsivo para consulta e validação de CEPs brasileiros, consumindo a API pública [ViaCEP](https://viacep.com.br/).
 
 ## Índice
 
@@ -24,7 +23,7 @@ O projeto foi construído com React, incluindo componentização, tipagem estát
 
 ![Página Home](src/assets/FireShot%20Capture%20001%20-%20Cep%20inteligente%20-%20[localhost].png)
 
-##  API utilizada: <u>via CEP</u>
+##  API utilizada: **ViaCEP**
 
 Toda a funcionalidade de consulta e validação de endereços deste projeto é alimentada pela **ViaCEP**.
 
@@ -110,7 +109,7 @@ cep-inteligente/
 
 ---
 
-## <u>Opção 1:</u> via Docker (Recomendado)
+## **Opção 1:** via Docker (Recomendado)
 
 Esta é a forma mais simples de executar o projeto, pois ele será executado em um container isolado com todas as dependências pré-configuradas (servidor Nginx e build do React).
 
@@ -137,7 +136,7 @@ docker run -d -p 8080:80 --name app-cep-container cep-inteligente
 Abra seu navegador e acesse: http://localhost:8080
 ```
 
-## <u>Opção 2:</u> Localmente (Desenvolvimento)
+## **Opção 2:** Localmente (Desenvolvimento)
 
 Esta forma é ideal para fazer alterações no código e ver as mudanças em tempo real.
 
