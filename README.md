@@ -4,7 +4,7 @@
 
 * [Sobre o Projeto](#sobre-o-projeto)
 * [Funcionalidades](#funcionalidades)
-* [API utilizada](#api-utilizada-via-cep)
+* [API utilizada](#api-utilizada-viacep)
 * [Tecnologias Utilizadas](#tecnologias-utilizadas)
 * [Estrutura de Pastas](#estrutura-de-pastas)
 * [Como Executar](#como-executar)
