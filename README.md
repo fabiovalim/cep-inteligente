@@ -21,7 +21,8 @@ O **CEP Inteligente** é um projeto front-end desenvolvido para demonstrar o con
 
 O projeto foi construído com React, incluindo componentização, tipagem estática com TypeScript, estilização customizada com Sass sobre o Bootstrap, e está 100% containerizado com Docker para garantir um ambiente de execução consistente.
 
-![Página Home](src/assets/FireShot%20Capture%20001%20-%20Cep%20inteligente%20-%20[localhost].png)
+<img width="1921" height="3897" alt="FireShot Capture 001 - Cep inteligente -  localhost" src="https://github.com/user-attachments/assets/795cfb2e-0eb5-4880-bb12-4a145a4ed6af" />
+
 
 ##  API utilizada: **ViaCEP**
 
@@ -45,14 +46,16 @@ O projeto foi dividido nas seguintes rotas:
 
 * **Consulta Individual (`/buscar-cep`)**
     Permite ao usuário digitar um CEP de 8 dígitos e retorna uma tabela com os dados completos do endereço.
-    ![Página Consulta Individual](src/assets/FireShot%20Capture%20002%20-%20Cep%20inteligente%20-%20[localhost].png)
-
+    <img width="1921" height="944" alt="FireShot Capture 002 - Cep inteligente -  localhost" src="https://github.com/user-attachments/assets/56db400c-f9d7-4193-8327-ba2c55befd60" />
+    
 * **Busca por Endereço (`/consulta-endereco`)**
     Permite ao usuário encontrar um ou mais CEPs através do preenchimento de formulário com UF, Cidade e Logradouro. Os resultados são exibidos em uma tabela.
-    ![Página Consulta Endereco](src/assets/FireShot%20Capture%20003%20-%20Cep%20inteligente%20-%20[localhost].png)
+    <img width="1921" height="944" alt="FireShot Capture 003 - Cep inteligente -  localhost" src="https://github.com/user-attachments/assets/163e5b7d-ebe3-4e3f-876b-aa4b37301705" />
+
 * **3. Validação em Lote (`/valida-cep`)**
     Uma ferramenta avançada onde o usuário pode adicionar dinamicamente múltiplas linhas de CEP, enviá-las para validação em paralelo e receber um status de "Válido" ou "Inválido" para cada um, com feedback visual.
-    ![Página validação de cep](src/assets/FireShot%20Capture%20004%20-%20Cep%20inteligente%20-%20[localhost].png)
+    <img width="1921" height="944" alt="FireShot Capture 004 - Cep inteligente -  localhost" src="https://github.com/user-attachments/assets/e13e8bc4-55bb-4249-ba7d-2e3919899981" />
+
 
 ## Tecnologias Utilizadas
 
